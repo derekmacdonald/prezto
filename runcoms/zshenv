@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
+export EDITOR='subl -w'
 export VISUAL='nano'
 export PAGER='less'
 
@@ -40,9 +40,18 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+
+android_sdk_root=/usr/local/Cellar/android-sdk/r22.0.1/
+
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  /usr/local/opt/ruby/bin
+  /usr/local/share/npm/bin
+  /usr/bin
+  $android_sdk_root{platform-tools,tools}
+  ~/bin
   $path
 )
 
